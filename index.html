@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>That's what... who said?</title>
+  </head>
+  <body>
+    <img
+      id="officeLogo"
+      src="imgs/officeLogo.png"
+      alt="The office logo"
+      srcset=""
+    />
+    <h1 id="subHeader">That's what... who said?</h1>
+    <section id="quoteContainer">
+      <p id="quote">
+        Welcome to 'That's what... she said', the game for office fans to really
+        test their knowledge! The aim of the game is simple. You'll get a random
+        quote and you have to guess who said it.
+      </p>
+    </section>
+    <section>
+      <p>Your Score: <span id="score">0</span>/10</p>
+    </section>
+
+    <form
+      action="/newinput"
+      name="userForm"
+      id="userInputForm"
+      autocomplete="off"
+      class="hide"
+    >
+      <!-- <label for="userChoice">Your Guess: </label> -->
+      <input
+        type="text"
+        name="userChoice"
+        id="userChoiceInput"
+        onkeyup="checkForm()"
+        placeholder="Your Guess"
+      />
+
+      <button id="submit" class="buttonGroup" disabled="disabled">
+        Submit
+      </button>
+    </form>
+    <button id="startButton" class="button buttonGroup">Start</button>
+    <button id="resetButton" class="button buttonGroup" disabled>Reset</button>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

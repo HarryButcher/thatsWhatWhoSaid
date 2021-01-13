@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  background-color: #f0f1f3;
+}
+
+#officeLogo {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  width: 20%;
+}
+
+#subHeader {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 1rem auto;
+}
+
+#quoteContainer {
+  display: flex;
+  margin: 2rem auto;
+  width: 70%;
+  height: auto;
+  min-height: 8rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+}
+
+#quote {
+  margin: 0 auto;
+  padding: 2rem;
+  align-self: center;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.button {
+  margin: 2rem 2rem;
+  padding: 1em 4em;
+  border-radius: 1.5em;
+  border: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  font-size: 1em;
+  background-color: #0f79af;
+  color: white;
+}
+
+#submit {
+  margin: 1rem 1rem;
+  padding: 0.5em 3em;
+  border-radius: 1.5em;
+  border: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  font-size: 1em;
+  background-color: #425265;
+  color: white;
+}
+
+.buttonGroup:focus {
+  outline: 0;
+}
+
+.buttonGroup:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.082);
+}
+
+.buttonGroup:disabled {
+  opacity: 0.5;
+}
+
+#userChoiceInput {
+  text-align: left;
+  margin: 1rem 1rem;
+  padding: 0.5em 3em;
+  border-radius: 0.5em;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+
+#userChoiceInput:focus {
+  outline: 0;
+}
+
+.correctAnswer {
+  background-color: green;
+  color: white;
+}
+
+.wrongAnswer {
+  background-color: red;
+  color: white;
+}
+
+.winner {
+  background-color: gold;
+  font-size: 10rem;
+}
+
+.loser {
+  background-color: red;
+  font-size: 10rem;
+}
