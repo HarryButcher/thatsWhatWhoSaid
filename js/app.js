@@ -6,7 +6,6 @@ const userForm = document.querySelector("#userInputForm");
 const submitButton = document.querySelector("#submit");
 const quoteContainer = document.querySelector("#quoteContainer");
 const scoreShown = document.querySelector("#score");
-const input = document.querySelector("#userChoiceInput");
 let currentQuoteId;
 let scoreCount = 0;
 let totalCount = 0;
@@ -15,6 +14,7 @@ let duplicateArr = [];
 async function generateQuote() {
   axios.get(randomQuote).then((response) => {
     let newQuote = response.data.data.content;
+    checkForm();
     if (duplicateArr.includes(newQuote)) {
       generateQuote();
       return;
@@ -40,19 +40,11 @@ const checkUserInput = (quoteId) => {
   }
 };
 
-input.addEventListener("input", (evt) => {
-  const value = input.value;
-  if (!value) {
-    input.dataset.state = "";
-    return;
-  }
-  const trimmed = value.trim();
-  if (trimmed) {
-    input.dataset.state = "valid";
-  } else {
-    input.dataset.state = "invalid";
-  }
-});
+function checkForm() {
+  let input = document.querySelector("#userChoiceInput").value;
+  let cansubmit = input.length > 0;
+  submitButton.disabled = !cansubmit;
+}
 
 function correctAnswer() {
   quote.innerHTML = "Correct!";
