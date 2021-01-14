@@ -108,3 +108,8 @@
   background-color: red;
   font-size: 10rem;
 }
+
+#scoreContainer {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
