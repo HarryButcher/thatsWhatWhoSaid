@@ -114,7 +114,7 @@ reset.addEventListener("click", function (e) {
   submitButton.disabled = true;
   quoteContainer.classList.remove("winner");
   quote.classList.remove("winner");
-  //   userForm.classList.remove("hide");
+  userForm.classList.remove("hide");
   quoteContainer.classList.remove("loser");
   quote.classList.remove("loser");
   quote.innerHTML = "Goodluck!";
