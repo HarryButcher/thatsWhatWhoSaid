@@ -53,7 +53,9 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
-  quote.innerHTML = `False! It's ${currentQuoteId}`;
+  quote.innerHTML = `False! It's ${
+    currentQuoteId.charAt(0).toUpperCase() + currentQuoteId.slice(1)
+  }`;
   quoteContainer.classList.add("wrongAnswer");
   quote.classList.add("wrongAnswer");
 }
@@ -62,7 +64,7 @@ function finish() {
   userForm.classList.add("hide");
   if (scoreCount === 10) {
     quote.innerHTML =
-      "Congratulations! 10/10. Dwight would be proud of you. <br> Want enough go? just hit the reset button.";
+      "Congratulations! 10/10. Dwight would be proud of you. <br> Want another go? just hit the reset button.";
     quoteContainer.classList.add("winner");
     quote.classList.add("winner");
   } else if (scoreCount >= 7) {
@@ -70,11 +72,11 @@ function finish() {
     quoteContainer.classList.add("winner");
     quote.classList.add("winner");
   } else if (scoreCount >= 5) {
-    quote.innerHTML = `Only ${scoreCount}/10... Might be time to open up Netflix and rewatch it. <br> Want another go? Hit the reset button.`;
+    quote.innerHTML = `Only ${scoreCount}/10... Better luck next time! <br> Want another go? Hit the reset button.`;
     quoteContainer.classList.add("loser");
     quote.classList.add("loser");
   } else {
-    quote.innerHTML = `Ouch! You suck. Only ${scoreCount}/10. Might be time to rethink your life. <br> Want another go? Hit the reset button`;
+    quote.innerHTML = `Ouch! Only ${scoreCount}/10. Maybe time to rewatch The Office! <br> Want another go? Hit the reset button`;
     quoteContainer.classList.add("loser");
     quote.classList.add("loser");
   }
